@@ -24,7 +24,7 @@ public class GeneradorEnemigos : MonoBehaviour
     { 
         if (Time.time - tiempoUltimo >= tiempoGeneracion) 
         { 
-            if (FindObjectsOfType<EnemigoIA>().Length < cantidadMaxima) 
+            if (FindObjectsByType<EnemigoIA>(FindObjectsSortMode.None).Length < cantidadMaxima) 
             { 
                 GenerarEnemigo(); 
                 tiempoUltimo = Time.time; 
